@@ -29,7 +29,7 @@ namespace ClassLibrary
                 
                 if ((item.CustomerFirstName == firstName && item.Password == password))
                 {
-                    //Console.WriteLine("Successful Sign In");
+                    Console.WriteLine("Successful Sign In");
                    // session = true;
                 }
                 else
