@@ -7,6 +7,7 @@ namespace ConsoleBankTest
     [TestClass]
     public class RegisterTest
     {
+        //Checks for a Valid customer name
         [TestMethod]
         public void CustomerFullName()
         {
@@ -23,7 +24,7 @@ namespace ConsoleBankTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
-
+        //Checks for NOn Valid customer Name
         [TestMethod]
         public void CustomerNotValid()
         {

@@ -7,6 +7,7 @@ namespace ConsoleBankTest
     [TestClass]
     public class LogInTest
     {
+        //Checks for valid input
         [TestMethod]
         public void fistNamePassWordMatch()
         {

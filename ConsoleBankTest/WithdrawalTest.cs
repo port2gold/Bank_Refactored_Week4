@@ -7,6 +7,7 @@ namespace ConsoleBankTest
     [TestClass]
     public class WithdrawalTest
     {
+        //Check for Negative Withdrawal
         [TestMethod]
         public void NegativeWithdrawal()
         {
@@ -17,7 +18,7 @@ namespace ConsoleBankTest
             //Act & Assert
             Assert.ThrowsException<ArgumentException>(() => account.Withdrawal(-3000, DateTime.Now, "Money for Food"));
         }
-
+        //Checks for Excess Withdrawal
         [TestMethod]
         public void ExcessWithdrawal()
         {
@@ -28,23 +29,8 @@ namespace ConsoleBankTest
 
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => account.Withdrawal(5000, DateTime.Now, "Bank Cheat"));
         }
-
-        [TestMethod]
-        public void WithdrawalEffected()
-        {
-            //Arrange
-            var account = new Account("Tasha", DateTime.Now);
-            account.Deposit(10000, DateTime.Now, "Wages");
-            account.Withdrawal(4000, DateTime.Now, "Flexing Money");
-            var expected = 6000;
-            //Act
-            var actual = account.GetBalance();
-
-            //Assert
-            Assert.AreEqual(expected, actual);
-
-
-        }
+        
+       
 
 
     }

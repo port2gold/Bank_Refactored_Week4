@@ -4,12 +4,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ConsoleBankTest
 {
+    
     [TestClass]
     public class TransferTest
     {
+        //Checks for Negative Amount Transfer
         [TestMethod]
         public void TransferNegativeAmount()
         {
+
             //Arrange
             var account = new Account("Keisha", DateTime.Now);
             account.Deposit(78000, DateTime.Now, "Money for Travels");
@@ -18,6 +21,7 @@ namespace ConsoleBankTest
             Assert.ThrowsException<ArgumentException>(() => account.Transfer("1234567890", -20000, DateTime.Now, "Negative Transfer"));
         }
 
+        //Checks for over Transfer
         [TestMethod]
         public void OverTransfer()
         {

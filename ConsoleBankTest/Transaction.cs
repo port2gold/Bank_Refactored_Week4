@@ -7,6 +7,7 @@ namespace ConsoleBankTest
     [TestClass]
     public class Transaction
     {
+        //Performs some transaction and return the number of Transactions done
         [TestMethod]
         public void TransactionCount()
         {
